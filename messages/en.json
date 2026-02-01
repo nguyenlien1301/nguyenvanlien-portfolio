@@ -1,0 +1,96 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "education": "Education",
+    "skills": "Skill",
+    "projects": "Projects",
+    "awards": "Awards",
+    "contact": "Contact",
+    "hireMe": "Hire me"
+  },
+
+  "Hero": {
+    "greeting": "Hello 👋, I am",
+    "name": "Nguyen Van Lien",
+    "role": "Front-End Developer",
+    "description": "I create beautiful, fast and user-friendly web experiences using modern technologies. Providing the best possible user experience."
+  },
+
+  "Buttons": {
+    "contact": "Contact me",
+    "cv": "My CV"
+  },
+
+  "OptionLanguage": {
+    "title": "Select language",
+    "en": "English",
+    "vi": "Vietnamese"
+  },
+
+  "About": {
+    "title": "About Me",
+    "question": "Who am I?",
+    "role": "Front-End Developer",
+    "paragraph1": "I am a Front-End Developer with a passion for building modern websites and web applications. I focus on creating intuitive, smooth and high-performance interfaces that deliver the best user experience across all platforms.",
+    "paragraph2": "With experience in developing diverse projects, from e-commerce websites to complex management systems, I continuously update myself with the latest technologies and apply best practices throughout the development process.",
+    "connect": "Connect with me",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email",
+      "phone": "Phone"
+    }
+  },
+
+  "Education": {
+    "title": "Education",
+    "college": {
+      "label": "College",
+      "school": "Dai Viet Saigon College",
+      "description": "Specialized in Software Engineering and Web Development"
+    },
+    "certification": {
+      "label": "Frontend Development Certification",
+      "school": "CFD Circle",
+      "description": "Advanced React, HTML, CSS, and Modern Web Technologies"
+    }
+  },
+
+  "Skills": {
+    "title": "My Skills",
+    "description": "These are the technologies and skills I have learned and used while developing projects."
+  },
+  "Projects": {
+    "title": "Projects",
+    "description": "These are the featured projects I have completed throughout my journey of developing and improving my skills.",
+    "detailProject": {
+      "title": "Restaurant Ordering System",
+      "category": "Restaurant",
+      "description": "A modern restaurant ordering platform that supports online ordering, order management, and efficient kitchen operations.",
+      "fullDescription": "A comprehensive restaurant ordering system built with Next.js for the user interface and Supabase for backend services and data management. The system supports online ordering via web and QR codes, category-based menu management, shopping cart functionality, real-time order processing, user authentication, and an admin dashboard for staff and managers. This platform helps streamline restaurant operations, reduce ordering errors, and enhance the overall customer experience."
+    },
+    "buttonView": "View Detail",
+    "btnAll": "View All"
+  },
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Always open to connect! Want to discuss a project or a potential collaboration? Feel free to reach out 😊",
+
+    "infoTitle": "Contact Information",
+    "phone": "Phone",
+
+    "form": {
+      "nameLabel": "Full name",
+      "namePlaceholder": "Your name...",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Your email...",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "Your subject...",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Your message...",
+      "sendMessage": "Sending...",
+      "submit": "Send message"
+    }
+  }
+}

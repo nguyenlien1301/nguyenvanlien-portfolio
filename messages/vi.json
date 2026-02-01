@@ -1,0 +1,97 @@
+{
+  "Navbar": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "education": "Học vấn",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "awards": "Giải thưởng",
+    "contact": "Liên hệ",
+    "hireMe": "Thuê tôi"
+  },
+
+  "Hero": {
+    "greeting": "Xin chào 👋, tôi là",
+    "name": "Nguyễn Văn Liền",
+    "role": "Lập trình viên Front-End",
+    "description": "Tôi tạo ra những trải nghiệm web đẹp, nhanh nhạy và thân thiện với người dùng với các công nghệ hiện đại. Cung cấp trải nghiệm người dùng tốt nhất có thể."
+  },
+
+  "Buttons": {
+    "contact": "Liên hệ với tôi",
+    "cv": "CV của tôi"
+  },
+
+  "OptionLanguage": {
+    "title": "Chọn ngôn ngữ",
+    "en": "Tiếng Anh",
+    "vi": "Tiếng Việt"
+  },
+
+  "About": {
+    "title": "Giới thiệu",
+    "question": "Tôi là ai?",
+    "role": "Lập trình viên Front-End",
+    "paragraph1": "Tôi là một lập trình viên Front-End với đam mê xây dựng các trang web và ứng dụng web hiện đại. Tôi tập trung vào việc tạo ra giao diện trực quan, mượt mà và tối ưu hiệu suất, mang đến trải nghiệm tốt nhất cho người dùng trên mọi nền tảng.",
+    "paragraph2": "Với kinh nghiệm trong việc phát triển các dự án đa dạng, từ website thương mại điện tử đến ứng dụng quản lý phức tạp, tôi luôn cập nhật những công nghệ mới nhất và áp dụng các best practices trong quá trình phát triển.",
+    "connect": "Kết nối với tôi",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email",
+      "phone": "Điện thoại"
+    }
+  },
+
+  "Education": {
+    "title": "Học vấn",
+    "college": {
+      "label": "Cao đẳng",
+      "school": "Đại Việt Sài Gòm",
+      "description": "Chuyên ngành Kỹ thuật phần mềm và Phát triển Web"
+    },
+    "certification": {
+      "label": "Trung tâm đào tạo kỹ năng lập trình",
+      "school": "CFD Circle",
+      "description": "React nâng cao, HTML, CSS và Công nghệ Web hiện đại"
+    }
+  },
+
+  "Skills": {
+    "title": "Kỹ năng của tôi",
+    "description": "Đây là những công nghệ và kỹ năng mà tôi đã học và sử dụng trong quá trình phát triển các dự án."
+  },
+
+  "Projects": {
+    "title": "Dự án",
+    "description": "Đây là dự án nổi bật mà tôi đã hoàn thiện trong quá trình phát triển kĩ năng của mình trong suốt thời gian qua.",
+    "detailProject": {
+      "title": "Hệ thống đặt món nhà hàng",
+      "category": "Nhà hàng",
+      "description": "Một nền tảng đặt món nhà hàng hiện đại, hỗ trợ order trực tuyến, quản lý đơn hàng và vận hành bếp hiệu quả.",
+      "fullDescription": "Đã xây dựng một hệ thống đặt món nhà hàng toàn diện sử dụng Next.js cho giao diện người dùng, Supabase cho hệ thống backend và quản lý dữ liệu. Hệ thống hỗ trợ đặt món qua web/QR code, quản lý menu theo danh mục, giỏ hàng, xử lý đơn hàng theo thời gian thực, xác thực người dùng và bảng điều khiển quản trị cho nhân viên và quản lý. Nền tảng giúp tối ưu quy trình phục vụ, giảm sai sót khi order và nâng cao trải nghiệm khách hàng tại nhà hàng."
+    },
+    "buttonView": "Xem chi tiết",
+    "btnAll": "Xem tất cả"
+  },
+
+  "Contact": {
+    "title": "Liên hệ",
+    "subtitle": "Luôn sẵn sàng kết nối! Bạn muốn trao đổi về một dự án hoặc cơ hội cùng làm việc với nhau? Hãy liên hệ ngay 😊",
+
+    "infoTitle": "Thông tin liên hệ",
+    "phone": "Số điện thoại",
+
+    "form": {
+      "nameLabel": "Họ và tên",
+      "namePlaceholder": "Tên của bạn...",
+      "emailPlaceholder": "Email của bạn...",
+      "subjectLabel": "Tiêu đề",
+      "subjectPlaceholder": "Tiêu đề của bạn...",
+      "messageLabel": "Nội dung",
+      "messagePlaceholder": "Nội dung của bạn...",
+      "sendMessage": "Đang gửi...",
+      "submit": "Gửi tin nhắn"
+    }
+  }
+}
