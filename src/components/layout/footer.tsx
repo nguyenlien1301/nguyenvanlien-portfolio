@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Github, Heart, Linkedin, Mail, Phone } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -20,7 +21,7 @@ const Footer = () => {
                 className="w-10 h-10 mr-2"
                 whileHover={{ rotate: 10 }}
               >
-                <img
+                <Image
                   src="https://cdn3d.iconscout.com/3d/premium/thumb/code-5806767-4863042.png"
                   alt="FEDev Logo"
                   className="w-full h-full object-contain"
