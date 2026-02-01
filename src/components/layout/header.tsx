@@ -6,9 +6,11 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import Language from "../common/language";
 import ModeToggle from "../common/mode-toggle";
+import { MobileMenu } from "./mobile-menu";
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // const locale = params.locale as Locale;
   const t = useTranslations("Navbar");
@@ -106,6 +108,7 @@ const Header = () => {
           </div>
         </div>
       </motion.nav>
+      <MobileMenu />
     </div>
   );
 };
