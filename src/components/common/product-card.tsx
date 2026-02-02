@@ -211,7 +211,7 @@ function ProductCard({ projects, t }: ProjectsSectionCustomProps) {
                     {t("buttonView")}
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="max-w-2xl bg-white dark:bg-gray-800">
+                <DialogContent className="bg-white dark:bg-gray-800">
                   <DialogHeader>
                     <DialogTitle className="text-2xl dark:text-white text-black">
                       {t(project.title)}

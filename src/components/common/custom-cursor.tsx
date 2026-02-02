@@ -67,7 +67,7 @@ export default function CustomCursor() {
 
   return (
     <div
-      className={`fixed pointer-events-none z-1000 ${
+      className={`hidden sm:block fixed pointer-events-none z-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
       } transition-opacity duration-200`}
       style={{

@@ -146,23 +146,9 @@ export function MobileMenu({
 
               <div className="flex items-center gap-3 pt-3 pb-8">
                 <Globe className="w-5 h-5 text-slate-400" />
-                {/* <Select
-                  defaultValue={currentLang}
-                  onValueChange={onLanguageChange}
-                >
-                  <SelectTrigger className="w-32 bg-slate-800/50 border-slate-700 text-white">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent className="bg-slate-800 border-slate-700">
-                    <SelectItem value="vi" className="text-white">
-                      VI
-                    </SelectItem>
-                    <SelectItem value="en" className="text-white">
-                      EN
-                    </SelectItem>
-                  </SelectContent>
-                </Select> */}
-                <Language />
+                <div className="flex flex-col gap-2 w-32 sm:w-36">
+                  <Language />
+                </div>
               </div>
             </div>
           </div>

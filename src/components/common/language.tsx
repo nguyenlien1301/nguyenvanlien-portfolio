@@ -30,7 +30,7 @@ function Language() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col gap-2 w-32 sm:w-36">
+    <>
       <SearchParamsLoader onParamsReceived={setSearchParams} />
       <Select
         value={locale}
@@ -65,7 +65,7 @@ function Language() {
           </SelectGroup>
         </SelectContent>
       </Select>
-    </div>
+    </>
   );
 }
 

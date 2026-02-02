@@ -10,7 +10,6 @@ import { MobileMenu } from "./mobile-menu";
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState("home");
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // const locale = params.locale as Locale;
   const t = useTranslations("Navbar");
@@ -53,12 +52,23 @@ const Header = () => {
         <div className="flex items-center justify-between w-full space-x-6 lg:space-x-8">
           {/* Logo */}
           <motion.a
-            href="/"
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2"
+            href="#"
+            className="text-xl font-bold hover:scale-110 transition-all duration-300 ease-in-out flex items-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
           >
-            <span className="text-xl font-bold text-primary">
-              Portfolio<span className="text-orange-500">.</span>
+            <motion.div className="w-10 h-10 mr-2" whileHover={{ rotate: 10 }}>
+              <img
+                src="https://cdn3d.iconscout.com/3d/premium/thumb/code-5806767-4863042.png"
+                alt="FEDev Logo"
+                className="w-full h-full object-contain"
+                width="40"
+                height="40"
+              />
+            </motion.div>
+            <span className="bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent font-bold">
+              FEDev
             </span>
           </motion.a>
           {/* Navigation Item */}
@@ -95,16 +105,18 @@ const Header = () => {
           </div>
           {/* Darkmode toggle */}
           <div className="flex item-center gap-5">
-            <Language />
-            <ModeToggle />
+            <div className="hidden lg:flex flex-col gap-2 w-32 sm:w-36">
+              <Language />
+            </div>
             {/* Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`hidden lg:flex items-center justify-center text-xs px-3 py-1 font-semibold rounded-full bg-linear-to-r text-white shadow-md hover:shadow-lg transition-shadow ${greetingClass}`}
+              className={`flex items-center justify-center text-xs px-3 py-1 font-semibold rounded-full bg-linear-to-r text-white shadow-md hover:shadow-lg transition-shadow ${greetingClass}`}
             >
               {greeting.text}
             </motion.button>
+            <ModeToggle />
           </div>
         </div>
       </motion.nav>

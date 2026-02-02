@@ -258,7 +258,7 @@ const HeroSection = () => {
                 {t("description")}
               </p>
 
-              <div className="flex justify-center gap-4 mb-12 md:justify-start relative z-10">
+              <div className="flex sm:flex-wrap justify-center gap-4 mb-12 md:justify-start relative z-10">
                 <motion.a href="#contact" className="w-full sm:w-auto">
                   <button className="w-full sm:w-auto inline-flex items-center justify-center text-white bg-linear-to-r from-blue-400 bg-blue-600 border-0 py-3 px-6 sm:px-8 hover:shadow-[0_0_8px_var(--color-blue-500)] rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform cursor-pointer gap-2">
                     <Mail className="size-5" />
@@ -296,7 +296,7 @@ const HeroSection = () => {
           </motion.div>
           {/* 3D Icon Cloud */}
           <motion.div
-            className="md:w-1/2 h-100 md:h-125 mt-10 md:mt-0"
+            className="hidden sm:block md:w-1/2 h-100 md:h-125 mt-10 md:mt-0"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
