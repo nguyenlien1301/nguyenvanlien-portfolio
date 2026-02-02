@@ -1,4 +1,5 @@
 import BackToTopButton from "@/components/common/backto-top-button";
+import CustomCursor from "@/components/common/custom-cursor";
 import ScrollProgress from "@/components/common/scroll-progress";
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
@@ -12,6 +13,7 @@ import SkillsSection from "@/components/sections/skills-section";
 const Home = () => {
   return (
     <>
+      <CustomCursor />
       <ScrollProgress />
       <Header />
       <HeroSection />
