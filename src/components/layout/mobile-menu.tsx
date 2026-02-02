@@ -1,14 +1,8 @@
 "use client";
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Globe, Menu, X } from "lucide-react";
 import { useState } from "react";
+import Language from "../common/language";
 
 interface MobileMenuProps {
   currentLang?: string;
@@ -47,9 +41,9 @@ export function MobileMenu({
         aria-label="Toggle menu"
       >
         {isOpen ? (
-          <X className="w-6 h-6 text-white" />
+          <X className="w-4 h-4 text-white" />
         ) : (
-          <Menu className="w-6 h-6 text-white" />
+          <Menu className="w-4 h-4 text-white" />
         )}
       </button>
 
@@ -150,9 +144,9 @@ export function MobileMenu({
                 ))}
               </nav>
 
-              <div className="flex items-center gap-3 pt-8">
+              <div className="flex items-center gap-3 pt-3 pb-8">
                 <Globe className="w-5 h-5 text-slate-400" />
-                <Select
+                {/* <Select
                   defaultValue={currentLang}
                   onValueChange={onLanguageChange}
                 >
@@ -167,7 +161,8 @@ export function MobileMenu({
                       EN
                     </SelectItem>
                   </SelectContent>
-                </Select>
+                </Select> */}
+                <Language />
               </div>
             </div>
           </div>
