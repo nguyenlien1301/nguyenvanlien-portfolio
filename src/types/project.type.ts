@@ -1,10 +1,17 @@
 export interface Project {
   id: number;
-  title: string;
+  key: string;
+  title?: string;
   heading?: string;
-  description: string;
+  description?: string;
+  videoUrl?: string;
+  category?: string;
+  demoVideoUrl?: string;
+  fullDescription?: string;
   image: string;
-  technologies: string[];
-  githubLink?: string;
-  demoLink?: string;
+  tech: string[];
+  github?: string;
+  featured: boolean;
+  demo?: string;
+  createdAt: string;
 }

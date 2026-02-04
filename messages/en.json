@@ -64,11 +64,37 @@
   "Projects": {
     "title": "Projects",
     "description": "These are the featured projects I have completed throughout my journey of developing and improving my skills.",
-    "detailProject": {
-      "title": "Restaurant Ordering System",
-      "category": "Restaurant",
-      "description": "A modern restaurant ordering platform that supports online ordering, order management, and efficient kitchen operations.",
-      "fullDescription": "A comprehensive restaurant ordering system built with Next.js for the user interface and Supabase for backend services and data management. The system supports online ordering via web and QR codes, category-based menu management, shopping cart functionality, real-time order processing, user authentication, and an admin dashboard for staff and managers. This platform helps streamline restaurant operations, reduce ordering errors, and enhance the overall customer experience."
+    "items": {
+      "restaurant": {
+        "title": "Restaurant Ordering System",
+        "category": "Restaurant",
+        "description": "A modern restaurant ordering platform that supports online ordering, order management, and efficient kitchen operations.",
+        "fullDescription": "A comprehensive restaurant ordering system built with Next.js for the user interface and Supabase for backend services and data management. The system supports online ordering via web and QR codes, category-based menu management, shopping cart functionality, real-time order processing, user authentication, and an admin dashboard for staff and managers. This platform helps streamline restaurant operations, reduce ordering errors, and enhance the overall customer experience."
+      },
+      "elearning": {
+        "title": "Online Learning Platform",
+        "category": "Education",
+        "description": "An online platform for learning programming with structured courses and hands-on practice.",
+        "fullDescription": "Developed an online programming learning platform that provides structured coding courses, video lessons, and practical exercises. The system allows students to enroll in courses, track learning progress, and practice coding through real-world projects. Built with React and Node.js, focusing on performance, scalability, and an intuitive learning experience."
+      },
+      "movie": {
+        "title": "Movie Trailer Application",
+        "category": "Entertainment",
+        "description": "A web application that allows users to explore movie information and watch trailers.",
+        "fullDescription": "Developed a web application that enables users to search for movies, explore detailed information, and watch trailers using movie APIs. The app features popular and trending movies, genre-based browsing, and YouTube trailer integration, delivering a smooth and engaging entertainment experience. Built with Next.js and TypeScript, focusing on performance, scalability, and user experience."
+      },
+      "landing-financeflow": {
+        "title": "FinanceFlow Platform Landing Page",
+        "category": "Design",
+        "description": "A modern product landing page featuring a clean layout and a user-centered design approach.",
+        "fullDescription": ""
+      },
+      "landing-wooder": {
+        "title": "Wooder Platform Landing Page",
+        "category": "Design",
+        "description": "A modern product landing page featuring a clean layout and a user-centered design approach.",
+        "fullDescription": ""
+      }
     },
     "buttonView": "View Detail",
     "btnAll": "View All"

@@ -65,16 +65,41 @@
   "Projects": {
     "title": "Dự án",
     "description": "Đây là dự án nổi bật mà tôi đã hoàn thiện trong quá trình phát triển kĩ năng của mình trong suốt thời gian qua.",
-    "detailProject": {
-      "title": "Hệ thống đặt món nhà hàng",
-      "category": "Nhà hàng",
-      "description": "Một nền tảng đặt món nhà hàng hiện đại, hỗ trợ order trực tuyến, quản lý đơn hàng và vận hành bếp hiệu quả.",
-      "fullDescription": "Đã xây dựng một hệ thống đặt món nhà hàng toàn diện sử dụng Next.js cho giao diện người dùng, Supabase cho hệ thống backend và quản lý dữ liệu. Hệ thống hỗ trợ đặt món qua web/QR code, quản lý menu theo danh mục, giỏ hàng, xử lý đơn hàng theo thời gian thực, xác thực người dùng và bảng điều khiển quản trị cho nhân viên và quản lý. Nền tảng giúp tối ưu quy trình phục vụ, giảm sai sót khi order và nâng cao trải nghiệm khách hàng tại nhà hàng."
+    "items": {
+      "restaurant": {
+        "title": "Hệ thống đặt món nhà hàng",
+        "category": "Nhà hàng",
+        "description": "Một nền tảng đặt món nhà hàng hiện đại, hỗ trợ order trực tuyến, quản lý đơn hàng và vận hành bếp hiệu quả.",
+        "fullDescription": "Đã xây dựng một hệ thống đặt món nhà hàng toàn diện sử dụng Next.js cho giao diện người dùng, Supabase cho hệ thống backend và quản lý dữ liệu. Hệ thống hỗ trợ đặt món qua web/QR code, quản lý menu theo danh mục, giỏ hàng, xử lý đơn hàng theo thời gian thực, xác thực người dùng và bảng điều khiển quản trị cho nhân viên và quản lý. Nền tảng giúp tối ưu quy trình phục vụ, giảm sai sót khi order và nâng cao trải nghiệm khách hàng tại nhà hàng."
+      },
+      "elearning": {
+        "title": "Nền tảng học tập trực tuyến",
+        "category": "Giáo dục",
+        "description": "Một nền tảng học lập trình trực tuyến với các khóa học có cấu trúc rõ ràng và bài thực hành sát thực tế.",
+        "fullDescription": "Đã xây dựng một nền tảng học lập trình trực tuyến cung cấp các khóa học được thiết kế bài bản, bài giảng video và các bài thực hành thực tế. Hệ thống cho phép học viên đăng ký khóa học, theo dõi tiến độ học tập và rèn luyện kỹ năng thông qua các dự án thực tế. Nền tảng được phát triển bằng React và Node.js, tập trung vào hiệu năng, khả năng mở rộng và trải nghiệm học tập trực quan."
+      },
+      "movie": {
+        "title": "Ứng dụng xem trailer phim",
+        "category": "Giải trí",
+        "description": "Ứng dụng web cho phép người dùng khám phá thông tin và xem trailer của các bộ phim phổ biến.",
+        "fullDescription": "Đã phát triển một ứng dụng web cho phép người dùng tìm kiếm, khám phá thông tin chi tiết và xem trailer của các bộ phim thông qua API phim. Ứng dụng hỗ trợ danh sách phim phổ biến, phim đang chiếu, phân loại theo thể loại và tích hợp trailer từ YouTube, mang lại trải nghiệm giải trí trực quan và mượt mà. Dự án được xây dựng bằng Next.js và TypeScript, tập trung vào hiệu năng, khả năng mở rộng và trải nghiệm người dùng."
+      },
+      "landing-financeflow": {
+        "title": "Landing Page Financeflow Platform",
+        "category": "Design",
+        "description": "Landing page giới thiệu sản phẩm với thiết kế hiện đại, bố cục rõ ràng và tập trung vào trải nghiệm người dùng.",
+        "fullDescription": ""
+      },
+      "landing-wooder": {
+        "title": "Landing Page Wooder Platform",
+        "category": "Design",
+        "description": "Landing page giới thiệu sản phẩm với thiết kế hiện đại, bố cục rõ ràng và tập trung vào trải nghiệm người dùng.",
+        "fullDescription": ""
+      }
     },
     "buttonView": "Xem chi tiết",
     "btnAll": "Xem tất cả"
   },
-
   "Contact": {
     "title": "Liên hệ",
     "subtitle": "Luôn sẵn sàng kết nối! Bạn muốn trao đổi về một dự án hoặc cơ hội cùng làm việc với nhau? Hãy liên hệ ngay 😊",

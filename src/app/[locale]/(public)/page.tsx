@@ -1,7 +1,3 @@
-import BackToTopButton from "@/components/common/backto-top-button";
-import CustomCursor from "@/components/common/custom-cursor";
-import ScrollProgress from "@/components/common/scroll-progress";
-import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
 import AboutSection from "@/components/sections/about-section";
 import ContactSection from "@/components/sections/contact-section";
@@ -13,8 +9,6 @@ import SkillsSection from "@/components/sections/skills-section";
 const Home = () => {
   return (
     <>
-      <CustomCursor />
-      <ScrollProgress />
       <Header />
       <HeroSection />
       <AboutSection />
@@ -24,8 +18,6 @@ const Home = () => {
       {/* <AwardSection /> */}
       {/* <ExperienceSection /> */}
       <ContactSection />
-      <Footer />
-      <BackToTopButton />
     </>
   );
 };
