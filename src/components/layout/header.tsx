@@ -58,7 +58,10 @@ const Header = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <motion.div className="w-10 h-10 mr-2" whileHover={{ rotate: 10 }}>
+            <motion.div
+              className="size-6 md:size-10 mr-2"
+              whileHover={{ rotate: 10 }}
+            >
               <img
                 src="https://cdn3d.iconscout.com/3d/premium/thumb/code-5806767-4863042.png"
                 alt="FEDev Logo"
@@ -67,7 +70,7 @@ const Header = () => {
                 height="40"
               />
             </motion.div>
-            <span className="bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent font-bold">
+            <span className="bg-linear-to-r text-sm md:text-xl from-blue-600 to-blue-400 bg-clip-text text-transparent font-bold">
               FEDev
             </span>
           </motion.a>
@@ -112,7 +115,7 @@ const Header = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`flex items-center justify-center text-xs px-3 py-1 font-semibold rounded-full bg-linear-to-r text-white shadow-md hover:shadow-lg transition-shadow ${greetingClass}`}
+              className={`flex items-center justify-center text-xs px-1 py-0 md:px-3 md:py-1 font-semibold rounded-full bg-linear-to-r text-white shadow-md hover:shadow-lg transition-shadow ${greetingClass}`}
             >
               {greeting.text}
             </motion.button>

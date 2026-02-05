@@ -39,26 +39,26 @@ function ProjectContainer() {
             </p>
           </motion.div>
         </div>
-        <div className="relative flex items-center">
-          <BreadcrumbComponent title="Project" />
-          {/* Filter Buttons */}
-          <div className="absolute left-1/2 -translate-x-1/2 flex flex-wrap justify-center gap-2 dark:text-white">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                onClick={() => setSelectedCategory(category)}
-                className={`${
-                  selectedCategory === category
-                    ? "dark:bg-white dark:text-black"
-                    : ""
-                }`}
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
+        {/* <div className="flex items-center justify-center"> */}
+        <BreadcrumbComponent title="Project" className="self-start" />
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap justify-center gap-2 dark:text-white mt-5">
+          {categories.map((category) => (
+            <Button
+              key={category}
+              variant={selectedCategory === category ? "default" : "outline"}
+              onClick={() => setSelectedCategory(category)}
+              className={`${
+                selectedCategory === category
+                  ? "dark:bg-white dark:text-black"
+                  : ""
+              }`}
+            >
+              {category}
+            </Button>
+          ))}
         </div>
+        {/* </div> */}
         <ProductCard projects={filteredProjects} t={t} />
       </div>
     </section>

@@ -14,6 +14,7 @@ import { ExternalLink, Eye, Github, Play, X } from "lucide-react";
 import { _Translator } from "next-intl";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import EmtyData from "./emty-data";
 
 // interface Project {
 //   id: number;
@@ -77,6 +78,9 @@ function ProductCard({ projects, t }: ProjectsSectionCustomProps) {
   }, [isHovered]);
   return (
     <>
+      {projects.length === 0 && (
+        <EmtyData title="No Project" className="mt-10" />
+      )}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mb-10">
         {projects.map((project) => {
           const baseKey = `items.${project.key}`;
@@ -212,13 +216,13 @@ function ProductCard({ projects, t }: ProjectsSectionCustomProps) {
                       {t("buttonView")}
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="bg-white dark:bg-gray-800">
+                  <DialogContent className="bg-white dark:bg-gray-800 max-w-[calc(100%-5rem)]">
                     <DialogHeader>
                       <DialogTitle className="text-2xl dark:text-white text-black">
                         {t(`${baseKey}.title`)}
                       </DialogTitle>
                     </DialogHeader>
-                    <div className="space-y-4 max-h-[80vh] overflow-y-auto">
+                    <div className="space-y-4 max-h-[60vh] md:max-h-[70vh] overflow-y-auto">
                       <Image
                         src={project.image}
                         alt={t(`${baseKey}.title`)}

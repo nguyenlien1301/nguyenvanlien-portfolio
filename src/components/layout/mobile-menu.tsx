@@ -37,7 +37,7 @@ export function MobileMenu({
     <>
       <button
         onClick={toggleMenu}
-        className="fixed top-6 right-6 z-50 p-3 rounded-full bg-slate-800/80 backdrop-blur-sm border border-slate-700 hover:bg-slate-700/80 transition-all duration-300 lg:hidden cursor-pointer"
+        className="fixed top-6 right-6 z-50  p-3 rounded-full bg-slate-800/80 backdrop-blur-sm border border-slate-700 hover:bg-slate-700/80 transition-all duration-300 lg:hidden cursor-pointer"
         aria-label="Toggle menu"
       >
         {isOpen ? (

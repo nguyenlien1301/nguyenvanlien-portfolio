@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import React from "react";
 import {
   BreadcrumbItem,
   BreadcrumbLink,
@@ -8,19 +9,30 @@ import {
   BreadcrumbSeparator,
 } from "../ui/breadcrumb";
 
-const BreadcrumbComponent = ({ title }: { title: string }) => {
+const BreadcrumbComponent = ({
+  title,
+  className,
+}: {
+  title: string;
+  className?: React.ReactNode;
+}) => {
   return (
-    <BreadcrumbList>
+    <BreadcrumbList className={`${className}`}>
       <BreadcrumbItem>
         <BreadcrumbLink asChild>
-          <Link href="/" className="hover:text-primary transition-all">
+          <Link
+            href="/"
+            className="hover:text-primary transition-all text-sm sm:text-base"
+          >
             Home
           </Link>
         </BreadcrumbLink>
       </BreadcrumbItem>
       <BreadcrumbSeparator />
       <BreadcrumbItem>
-        <BreadcrumbPage>{title}</BreadcrumbPage>
+        <BreadcrumbPage className="text-sm sm:text-base">
+          {title}
+        </BreadcrumbPage>
       </BreadcrumbItem>
     </BreadcrumbList>
   );
