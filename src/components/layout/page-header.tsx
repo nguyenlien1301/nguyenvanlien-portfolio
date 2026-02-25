@@ -1,28 +1,11 @@
 "use client";
 
-import { menuItems } from "@/shared/constants/menu-constant";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
 import Language from "../common/language";
 import ModeToggle from "../common/mode-toggle";
 import { MobileMenu } from "./mobile-menu";
 
-const Header = () => {
-  const [activeSection, setActiveSection] = useState("home");
-
-  // const locale = params.locale as Locale;
-  const t = useTranslations("Navbar");
-  useEffect(() => {
-    const hash = window.location.hash.replace("#", "");
-    if (hash) setActiveSection(hash);
-  }, []);
-
-  const handleNavClick = (itemName: string) => {
-    const section = itemName.toLowerCase();
-    setActiveSection(section);
-    window.location.hash = section;
-  };
+const PageHeader = () => {
   // const { handleSearchData } = useQueryString();
   // 🕐 Hàm xác định thời gian trong ngày
   const getGreeting = () => {
@@ -74,43 +57,8 @@ const Header = () => {
               FEDev
             </span>
           </motion.a>
-          {/* Navigation Item */}
-          <div className="hidden lg:flex items-center space-x-6">
-            {menuItems.map((item) => {
-              return (
-                <a
-                  key={item.key}
-                  // href={`${locale}/${item.href}`}
-                  href={item.href}
-                  className="relative"
-                  onClick={() => handleNavClick(item.key)}
-                >
-                  <motion.span
-                    className={`transition-colors text-sm duration-300 uppercase font-semibold ${
-                      activeSection === item.key.toLowerCase()
-                        ? "text-orange-600 dark:text-orange-400"
-                        : `text-gray-800 dark:text-gray-300 hover:text-orange-500`
-                    }`}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {t(`${item.key}`)}
-                  </motion.span>
-                  {activeSection === item.key.toLowerCase() && (
-                    <motion.div
-                      layoutId="navbar-indicator"
-                      className={`absolute -bottom-1 left-0 right-0 h-0.5 bg-linear-to-r rounded-full from-orange-500 to-amber-500`}
-                    ></motion.div>
-                  )}
-                </a>
-              );
-            })}
-          </div>
           {/* Darkmode toggle */}
           <div className="flex item-center gap-5">
-            <div className="hidden lg:flex flex-col gap-2 w-32 sm:w-36">
-              <Language />
-            </div>
             {/* Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -120,6 +68,9 @@ const Header = () => {
               {greeting.text}
             </motion.button>
             <ModeToggle />
+            <div className="hidden lg:flex flex-col gap-2 w-32 sm:w-36">
+              <Language />
+            </div>
           </div>
         </div>
       </motion.nav>
@@ -128,4 +79,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default PageHeader;

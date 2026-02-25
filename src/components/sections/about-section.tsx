@@ -9,12 +9,13 @@ import SectionTitle from "../common/section-title";
 const AboutSection = () => {
   const t = useTranslations("About");
   const images = [
-    "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=400",
-    "https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "",
+    // "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=400",
+    // "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=400",
+    // "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=400",
+    // "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=400",
+    // "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=400",
+    // "https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=400",
   ];
 
   return (
@@ -34,26 +35,50 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <div className="grid grid-cols-3 gap-4">
-              <div className="space-y-4">
-                <Image
-                  src={images[0]}
-                  alt="About me 1"
-                  className="w-full h-32 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                  width={200}
-                  height={32}
-                />
-                <Image
-                  src={images[1]}
-                  alt="About me 2"
-                  className="w-full h-40 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                  width={200}
-                  height={40}
-                />
-              </div>
+            <div
+              className="relative w-full h-100 lg:h-115 rounded-2xl from-blue-900/40 to-purple-900/30
+flex items-center justify-center"
+            >
+              <Image
+                src="/images/3d-about-me.png"
+                alt="About me"
+                fill
+                className="object-contain drop-shadow-2xl"
+                priority
+              />
+            </div>
+            {/* <div className="relative w-full h-75 md:h-100 lg:h-125 overflow-hidden rounded-2xl">
+              <Image
+                src="/images/3d-about-me.png"
+                alt="About me"
+                fill
+                priority
+                className="object-contain"
+              />
+            </div> */}
+            {/* <div className="grid grid-cols-3 gap-4"> */}
 
-              {/* Second Column */}
-              <div className="pt-8 space-y-4">
+            {/* {images && (
+                <div className="space-y-4">
+                  <Image
+                    src={images[0]}
+                    alt="About me 1"
+                    className="w-full h-32 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    width={200}
+                    height={32}
+                  />
+                  <Image
+                    src={images[1]}
+                    alt="About me 2"
+                    className="w-full h-40 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    width={200}
+                    height={40}
+                  />
+                </div>
+              )} */}
+
+            {/* Second Column */}
+            {/* <div className="pt-8 space-y-4">
                 <Image
                   src={images[2]}
                   alt="About me 3"
@@ -68,10 +93,10 @@ const AboutSection = () => {
                   width={200}
                   height={32}
                 />
-              </div>
+              </div> */}
 
-              {/* Third Column */}
-              <div className="space-y-4">
+            {/* Third Column */}
+            {/* <div className="space-y-4">
                 <Image
                   src={images[4]}
                   alt="About me 5"
@@ -86,8 +111,8 @@ const AboutSection = () => {
                   width={200}
                   height={44}
                 />
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
 
             {/* Decorative elements */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-600/10 rounded-full -z-10"></div>

@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Github, Heart, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 
 const Footer = () => {
@@ -29,7 +29,7 @@ const Footer = () => {
                   height="40"
                 />
               </motion.div>
-              <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent font-bold">
+              <span className="bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent font-bold">
                 FEDev
               </span>
             </motion.div>
@@ -76,8 +76,7 @@ const Footer = () => {
 
           <div className="text-center md:text-right">
             <p className="flex items-center justify-center md:justify-end text-gray-400">
-              Được thực hiện <Heart size={16} className="mx-1 text-red-500" />{" "}
-              năm {currentYear}
+              Được thực hiện năm {currentYear}
             </p>
           </div>
         </div>

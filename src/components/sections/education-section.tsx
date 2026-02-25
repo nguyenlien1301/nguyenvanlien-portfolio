@@ -62,9 +62,9 @@ const EducationSection = () => {
 
         {/* Timeline Node */}
         <div
-          className={`relative z-10 shrink-0 w-12 h-12 bg-linear-to-r ${getEducationColor(
+          className={`relative z-10 shrink-0 w-12 h-12 bg-linear-to-r hidden sm:flex ${getEducationColor(
             edu.type,
-          )} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
+          )} rounded-xl items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
         >
           <div className="text-white">{getEducationIcon(edu.type)}</div>
           {/* Pulse Animation */}
@@ -76,7 +76,7 @@ const EducationSection = () => {
         </div>
 
         {/* Content Card */}
-        <div className="ml-6 flex-1 bg-white dark:bg-gray-700 rounded-xl p-5 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-600 group-hover:border-blue-300 dark:group-hover:border-blue-500">
+        <div className="sm:ml-6 flex-1 bg-white dark:bg-gray-700 rounded-xl p-5 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-600 group-hover:border-blue-300 dark:group-hover:border-blue-500">
           <div className="flex items-start justify-between mb-2">
             <h4 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
               {t(edu.degree)}

@@ -22,7 +22,7 @@ const BreadcrumbComponent = ({
         <BreadcrumbLink asChild>
           <Link
             href="/"
-            className="hover:text-primary transition-all text-sm sm:text-base"
+            className="hover:hover:text-orange-400 transition-all text-sm sm:text-base text-gray-700 dark:text-gray-100"
           >
             Home
           </Link>

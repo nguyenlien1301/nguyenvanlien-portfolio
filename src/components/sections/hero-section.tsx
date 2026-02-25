@@ -267,7 +267,7 @@ const HeroSection = () => {
                 </motion.a>
 
                 <motion.a
-                  href="/images/nguyenvanlien-cv.pdf"
+                  href="/images/cv-nguyenvanlien.pdf"
                   download
                   className="w-full sm:w-auto"
                 >

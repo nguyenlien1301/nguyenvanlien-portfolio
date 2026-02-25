@@ -10,8 +10,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Locale, locales } from "@/config";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { useParams, usePathname, useRouter } from "next/navigation";
 import SearchParamsLoader, {
   useSearchParamsLoader,
 } from "./search-params-loader";
@@ -26,7 +26,6 @@ function Language() {
   const locale = useLocale();
   const { searchParams, setSearchParams } = useSearchParamsLoader();
   const pathname = usePathname();
-  const params = useParams();
   const router = useRouter();
 
   return (
@@ -35,14 +34,9 @@ function Language() {
       <Select
         value={locale}
         onValueChange={(value) => {
-          const currentLocale = params.locale as Locale;
-          const newPathname = pathname.replace(
-            `/${currentLocale}`,
-            `/${value}`,
-          );
-          const fullUrl = `${newPathname}?${searchParams?.toString()}`;
-          router.replace(fullUrl);
-          router.refresh();
+          const queryString = searchParams?.toString();
+          const url = queryString ? `${pathname}?${queryString}` : pathname;
+          router.replace(url, { locale: value as Locale });
         }}
       >
         <SelectTrigger className="w-full">

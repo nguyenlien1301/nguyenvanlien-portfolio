@@ -5,6 +5,13 @@ import EducationSection from "@/components/sections/education-section";
 import HeroSection from "@/components/sections/hero-section";
 import ProjectSection from "@/components/sections/project-section";
 import SkillsSection from "@/components/sections/skills-section";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Nguyễn Văn Liền - Front-end Developer",
+  description:
+    "Nguyễn Văn Liền là Front-end Developer. Xây dựng website,landing page tối ưu hiệu năng và SEO.",
+};
 
 const Home = () => {
   return (

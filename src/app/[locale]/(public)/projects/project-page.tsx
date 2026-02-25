@@ -21,7 +21,7 @@ function ProjectContainer() {
           console.log(project.category, selectedCategory);
         });
   return (
-    <section className="py-15 bg-gray-50 dark:bg-gray-900">
+    <section className="py-15 bg-gray-50 dark:bg-gray-900 pt-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <motion.div

@@ -33,7 +33,7 @@ const nextConfig: NextConfig = {
   experimental: {
     staleTimes: {
       dynamic: 30, // Thời gian cache cho các route động, mặc định ở v15 là 0 giây
-      // static: 180, // Thời gian cache cho các route tĩnh, mặc định ở v15 là 5 phút (300s)
+      static: 180, // Thời gian cache cho các route tĩnh, mặc định ở v15 là 5 phút (300s)
     },
   },
 };

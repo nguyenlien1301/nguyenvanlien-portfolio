@@ -38,10 +38,13 @@ export async function generateMetadata({
     locale,
     namespace: "Hero",
   });
-
+  //  `${t("greeting")} ${t("name")}`,
   return {
-    title: `${t("greeting")} ${t("name")}`,
-    description: "The best restaurant in the world",
+    title: {
+      template: "%s | Portfolio",
+      default: "Portfolio",
+    },
+    description: "Nguyen Van Lien Portfolio",
   };
 }
 
@@ -76,8 +79,8 @@ export default async function RootLayout({
           <ScrollSectionProvider>
             <ThemeProvider
               attribute="class"
-              defaultTheme="light"
-              enableSystem
+              defaultTheme="dark"
+              enableSystem={false}
               disableTransitionOnChange
             >
               {children}
