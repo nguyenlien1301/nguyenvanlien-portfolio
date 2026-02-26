@@ -8,7 +8,7 @@ export const projects: Project[] = [
     // category: "detailProject.category",
     // description: "detailProject.description",
     // fullDescription: "detailProject.fullDescription",
-    image: "/images/projects/project-1.jpg",
+    image: "/images/projects/coming-soon.jpg",
     videoUrl: "",
     demoVideoUrl: "",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Socket.io", "i18n"],

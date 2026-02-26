@@ -49,7 +49,7 @@ export const skillGroups: SkillGroup[] = [
       },
       {
         name: "Context API",
-        icon: "/images/skills/",
+        icon: "/images/skills/.svg",
         color: "#61DAFB",
       },
     ],

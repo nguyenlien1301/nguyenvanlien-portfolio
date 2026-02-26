@@ -35,6 +35,44 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
+            <motion.div
+              animate={{
+                y: [0, -20, 0],
+                rotate: [0, 5, 0, -5, 0],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src="/images/robot.png"
+                alt="robot"
+                width={100}
+                height={100}
+              />
+            </motion.div>
+            <motion.div
+              animate={{
+                x: [0, 50, 0], // di chuyển ngang
+                y: [0, 0, 0], // bay lên rồi xuống
+                rotate: [0], // xoay theo hướng bay
+              }}
+              transition={{
+                duration: 5,
+                ease: "easeInOut",
+                repeat: Infinity,
+              }}
+              className="flex justify-center"
+            >
+              <Image
+                src="/images/robot-2.png"
+                alt="rocket"
+                width={150}
+                height={150}
+              />
+            </motion.div>
             <div
               className="relative w-full h-100 lg:h-115 rounded-2xl from-blue-900/40 to-purple-900/30
 flex items-center justify-center"
@@ -119,7 +157,6 @@ flex items-center justify-center"
             <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-600/10 rounded-full -z-10"></div>
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-yellow-400/20 rounded-full -z-10"></div>
           </motion.div>
-
           {/* Content Section */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
