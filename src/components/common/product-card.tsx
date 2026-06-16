@@ -15,6 +15,7 @@ import { _Translator } from "next-intl";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import EmtyData from "./emty-data";
+import TiltCard from "./tilt-card";
 
 // interface Project {
 //   id: number;
@@ -85,11 +86,16 @@ function ProductCard({ projects, t }: ProjectsSectionCustomProps) {
         {projects.map((project) => {
           const baseKey = `items.${project.key}`;
           return (
-            <div
+            <TiltCard
               key={project.id}
-              className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col"
+              className="relative rounded-lg overflow-hidden"
+              glowColor="rgba(250,204,21,0.10)"
+              maxTilt={7}
               onMouseEnter={() => setIsHovered(project.id)}
               onMouseLeave={() => setIsHovered(null)}
+            >
+            <div
+              className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-shadow flex flex-col h-full border border-transparent hover:border-amber-400/30 dark:hover:border-amber-400/20"
             >
               <div className="relative overflow-hidden bg-gray-200 dark:bg-gray-700">
                 {project.videoUrl ? (
@@ -291,6 +297,7 @@ function ProductCard({ projects, t }: ProjectsSectionCustomProps) {
                 </Dialog>
               </div>
             </div>
+            </TiltCard>
           );
         })}
       </div>

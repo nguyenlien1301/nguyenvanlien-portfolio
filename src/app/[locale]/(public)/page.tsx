@@ -6,6 +6,7 @@ import EducationSection from "@/components/sections/education-section";
 import HeroSection from "@/components/sections/hero-section";
 import ProjectSection from "@/components/sections/project-section";
 import SkillsSection from "@/components/sections/skills-section";
+import TechStackSection from "@/components/sections/tech-stack-section";
 import { Metadata } from "next";
 
 // export const metadata: Metadata = {
@@ -85,6 +86,7 @@ const Home = () => {
       <AboutSection />
       <EducationSection />
       <SkillsSection />
+      <TechStackSection />
       <ProjectSection />
       {/* <AwardSection /> */}
       {/* <ExperienceSection /> */}

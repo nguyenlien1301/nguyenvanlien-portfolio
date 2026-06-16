@@ -279,9 +279,14 @@ const HeroSection = () => {
                 {t("description")}
               </p>
 
-              <div className="flex sm:flex-wrap justify-center gap-4 mb-12 md:justify-start relative z-10">
-                <motion.a href="#contact" className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto inline-flex items-center justify-center text-white bg-linear-to-r from-blue-400 bg-blue-600 border-0 py-3 px-6 sm:px-8 hover:shadow-[0_0_8px_var(--color-blue-500)] rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform cursor-pointer gap-2">
+              <div className="flex flex-wrap justify-center gap-4 mb-12 md:justify-start relative z-10">
+                <motion.a
+                  href="#contact"
+                  className="w-full sm:w-auto"
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 hover:brightness-110 cursor-pointer sm:text-lg">
                     <Mail className="size-5" />
                     {b("contact")}
                   </button>
@@ -291,8 +296,10 @@ const HeroSection = () => {
                   href="/images/cv-nguyenvanlien.pdf"
                   download
                   className="w-full sm:w-auto"
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.97 }}
                 >
-                  <button className="w-full sm:w-auto inline-flex items-center justify-center text-white bg-linear-to-r from-blue-400 bg-blue-600 border-0 py-3 px-6 sm:px-8 hover:shadow-[0_0_8px_var(--color-blue-500)] rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform cursor-pointer gap-2">
+                  <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-full border-2 border-blue-500/40 bg-white/10 px-7 py-3.5 text-base font-semibold text-blue-700 backdrop-blur-sm transition-all duration-300 hover:border-blue-500/70 hover:bg-blue-50/60 hover:shadow-lg hover:shadow-blue-500/10 dark:border-blue-400/30 dark:bg-white/5 dark:text-blue-300 dark:hover:border-blue-400/60 dark:hover:bg-white/10 dark:hover:shadow-blue-400/10 cursor-pointer sm:text-lg">
                     <DownloadIcon className="size-5" />
                     {b("cv")}
                   </button>
