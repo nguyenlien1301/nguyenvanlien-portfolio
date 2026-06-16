@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ...baseOpenGraph(locale),
       images: [
         {
-          url: "http://localhost:3000/images/banner-portfolio.png",
+          url: "https://nguyenvanlien-portfolio.vercel.app/images/banner-portfolio.webp",
           width: 1200,
           height: 630,
           alt: "Nguyen Van Lien Portfolio",

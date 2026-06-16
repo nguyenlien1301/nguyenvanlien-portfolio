@@ -100,8 +100,10 @@ function ProductCard({ projects, t }: ProjectsSectionCustomProps) {
                       className={`w-full h-48 object-cover transition-opacity duration-300 ${
                         isHovered === project.id ? "opacity-0" : "opacity-100"
                       }`}
-                      width={1200}
-                      height={600}
+                      width={800}
+                      height={450}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                     <video
                       ref={(el) => {
@@ -121,8 +123,10 @@ function ProductCard({ projects, t }: ProjectsSectionCustomProps) {
                     src={project.image}
                     alt={t(`${baseKey}.title`)}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    width={1200}
-                    height={600}
+                    width={800}
+                    height={450}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    loading="lazy"
                   />
                 )}
                 {project.featured && (
@@ -227,8 +231,10 @@ function ProductCard({ projects, t }: ProjectsSectionCustomProps) {
                         src={project.image}
                         alt={t(`${baseKey}.title`)}
                         className="w-full h-64 object-cover rounded-lg"
-                        width={500}
-                        height={64}
+                        width={800}
+                        height={450}
+                        sizes="(max-width: 768px) 100vw, 800px"
+                        loading="lazy"
                       />
                       <p className="mb-4 text-gray-600 dark:text-gray-400">
                         {t(`${baseKey}.fullDescription`)}

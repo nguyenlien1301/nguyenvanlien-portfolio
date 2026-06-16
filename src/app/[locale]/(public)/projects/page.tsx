@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Nguyễn Văn Liền Portfolio",
       images: [
         {
-          url: "https://nguyenvanlien-portfolio.vercel.app/images/banner-portfolio-project.png",
+          url: "https://nguyenvanlien-portfolio.vercel.app/images/banner-portfolio-project.webp",
           width: 1200,
           height: 630,
           alt: "Portfolio",

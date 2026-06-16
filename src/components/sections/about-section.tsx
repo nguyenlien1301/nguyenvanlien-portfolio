@@ -47,10 +47,11 @@ const AboutSection = () => {
               }}
             >
               <Image
-                src="/images/robot.png"
+                src="/images/robot.webp"
                 alt="robot"
                 width={100}
                 height={100}
+                loading="lazy"
               />
             </motion.div>
             <motion.div
@@ -67,10 +68,11 @@ const AboutSection = () => {
               className="flex justify-center"
             >
               <Image
-                src="/images/robot-2.png"
+                src="/images/robot-2.webp"
                 alt="rocket"
                 width={150}
                 height={150}
+                loading="lazy"
               />
             </motion.div>
             <div
@@ -78,10 +80,11 @@ const AboutSection = () => {
 flex items-center justify-center"
             >
               <Image
-                src="/images/3d-about-me.png"
+                src="/images/3d-about-me.webp"
                 alt="About me"
                 fill
                 className="object-contain drop-shadow-2xl"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
             </div>

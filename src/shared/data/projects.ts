@@ -8,7 +8,7 @@ export const projects: Project[] = [
     // category: "detailProject.category",
     // description: "detailProject.description",
     // fullDescription: "detailProject.fullDescription",
-    image: "/images/projects/coming-soon.jpg",
+    image: "/images/projects/coming-soon.webp",
     videoUrl: "",
     demoVideoUrl: "",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Socket.io", "i18n"],
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     //   "An online platform for learning programming with structured courses and hands-on practice.",
     // fullDescription:
     //   "Developed an online programming learning platform that provides structured coding courses, video lessons, and practical exercises. The system allows students to enroll in courses, track learning progress, and practice coding through real-world projects. Built with React and Node.js, focusing on performance, scalability, and an intuitive learning experience.",
-    image: "/images/projects/project-2.jpg",
+    image: "/images/projects/project-2.webp",
     videoUrl: "",
     demoVideoUrl: "",
     tech: [
@@ -45,7 +45,7 @@ export const projects: Project[] = [
   {
     id: 3,
     key: "movie",
-    image: "/images/projects/project-3.jpg",
+    image: "/images/projects/project-3.webp",
     videoUrl: "",
     demoVideoUrl: "",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "TMDB API", "YouTube API"],
@@ -57,7 +57,7 @@ export const projects: Project[] = [
   {
     id: 4,
     key: "landing-financeflow",
-    image: "/images/projects/project-4.jpg",
+    image: "/images/projects/project-4.webp",
     videoUrl: "",
     demoVideoUrl: "",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "TMDB API", "YouTube API"],
@@ -69,7 +69,7 @@ export const projects: Project[] = [
   {
     id: 5,
     key: "landing-wooder",
-    image: "/images/projects/project-5.jpg",
+    image: "/images/projects/project-5.webp",
     videoUrl: "",
     demoVideoUrl: "",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "TMDB API", "YouTube API"],

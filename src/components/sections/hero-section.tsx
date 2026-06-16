@@ -1,21 +1,26 @@
 "use client";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import { ArrowDown, DownloadIcon, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import EarthRotate from "./earth-rotate";
 
-const HeroSection = () => {
-  const t = useTranslations("Hero");
-  const b = useTranslations("Buttons");
+// Dynamic import for EarthRotate to reduce bundle size and prevent SSR issues
+// const EarthRotate = dynamic(() => import("./earth-rotate"), {
+//   ssr: false,
+//   loading: () => (
+//     <div className="h-full w-full animate-pulse bg-gray-200/10 dark:bg-gray-800/10 rounded-2xl" />
+//   ),
+// });
 
-  const name = t("name");
+// Separate TypewriterText component to isolate re-renders from state updates
+const TypewriterText = memo(({ name }: { name: string }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [index, setIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
-  const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timeout = setTimeout(
@@ -40,13 +45,37 @@ const HeroSection = () => {
     );
 
     return () => clearTimeout(timeout);
-  }, [index, isDeleting]);
+  }, [index, isDeleting, name]);
+
   useEffect(() => {
     const cursorInterval = setInterval(() => {
       setShowCursor((prev) => !prev);
     }, 500);
     return () => clearInterval(cursorInterval);
   }, []);
+
+  return (
+    <motion.span
+      className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      {displayedText}
+      {showCursor && <span className="animate-blink">|</span>}
+    </motion.span>
+  );
+});
+
+TypewriterText.displayName = "TypewriterText";
+
+const HeroSection = () => {
+  const t = useTranslations("Hero");
+  const b = useTranslations("Buttons");
+  const name = t("name");
+
+  // Only load and render EarthRotate on desktop screens (Tailwind sm default is 640px)
+  const isDesktop = useMediaQuery("(min-width: 640px)");
 
   return (
     <section
@@ -214,7 +243,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-600 to-purple-600 animate-ping opacity-20" />
               <div className="relative w-40 h-40 overflow-hidden mb-8 transition-all duration-500 border-4 border-blue-500 rounded-full md:mx-0 hover:border-blue-600 dark:border-blue-600 dark:hover:border-blue-500 hover:shadow-xl hover:shadow-blue-200 dark:hover:shadow-blue-900/30">
                 <Image
-                  src="/avatar.jpg"
+                  src="/avatar.webp"
                   alt="avatar"
                   className="object-cover w-full h-full transition-transform duration-700 hover:scale-110"
                   loading="eager"
@@ -234,15 +263,7 @@ const HeroSection = () => {
                 {t("greeting")}
               </h1>
               <h2 className="text-4xl md:text-5xl font-bold mb-4 h-16 md:h-20">
-                <motion.span
-                  className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1 }}
-                >
-                  {displayedText}
-                  {showCursor && <span className="animate-blink">|</span>}
-                </motion.span>
+                <TypewriterText name={name} />
               </h2>
               <h3 className="text-2xl text-gray-700 md:text-3xl dark:text-gray-300">
                 {t("role")}
@@ -301,7 +322,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <EarthRotate />
+            {isDesktop && <EarthRotate />}
           </motion.div>
         </div>
       </div>

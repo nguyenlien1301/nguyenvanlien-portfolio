@@ -1,5 +1,3 @@
-"use client";
-
 import { skills } from "@/shared/data/skills";
 import {
   Float,
@@ -10,7 +8,7 @@ import {
 } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useTheme } from "next-themes";
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { memo, ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { Group, Mesh, Vector3 } from "three";
 
 /* ================= Color + Size Scheme ================= */
@@ -80,7 +78,7 @@ type OrbitingPlanetProps = {
   color: string;
 };
 
-const OrbitingPlanet = ({
+const OrbitingPlanet = memo(({
   radius,
   speed,
   size,
@@ -105,9 +103,11 @@ const OrbitingPlanet = ({
       />
     </mesh>
   );
-};
+});
 
-const Sun = ({ color }: { color: string }) => {
+OrbitingPlanet.displayName = "OrbitingPlanet";
+
+const Sun = memo(({ color }: { color: string }) => {
   return (
     <mesh>
       <sphereGeometry args={[0.5, 32, 32]} />
@@ -115,7 +115,9 @@ const Sun = ({ color }: { color: string }) => {
       <pointLight color={color} intensity={3} distance={10} />
     </mesh>
   );
-};
+});
+
+Sun.displayName = "Sun";
 
 const createOrbitPath = (radius: number, segments: number): Vector3[] => {
   const points: Vector3[] = [];
@@ -137,7 +139,7 @@ type SkillTextProps = {
   color?: string;
 };
 
-const SkillText = ({
+const SkillText = memo(({
   position,
   children,
   fontSize = 0.4,
@@ -156,7 +158,18 @@ const SkillText = ({
       </Text>
     </Float>
   );
-};
+}, (prevProps, nextProps) => {
+  return (
+    prevProps.fontSize === nextProps.fontSize &&
+    prevProps.color === nextProps.color &&
+    prevProps.children === nextProps.children &&
+    prevProps.position[0] === nextProps.position[0] &&
+    prevProps.position[1] === nextProps.position[1] &&
+    prevProps.position[2] === nextProps.position[2]
+  );
+});
+
+SkillText.displayName = "SkillText";
 
 /* ================= Cloud ================= */
 
@@ -179,7 +192,10 @@ const Cloud = ({ setCursor }: { setCursor: (state: boolean) => void }) => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  const globeParticleSeed = createSpherePoints(2500, 3.5 * radiusScale);
+
+  const globeParticleSeed = useMemo(() => {
+    return createSpherePoints(2500, 3.5 * radiusScale);
+  }, [radiusScale]);
 
   /* ===== Theme ===== */
   const { theme } = useTheme();
@@ -187,14 +203,19 @@ const Cloud = ({ setCursor }: { setCursor: (state: boolean) => void }) => {
   const mode = isLight ? LIGHT : DARK;
 
   /* ===== Geometry ===== */
-  const globeParticles = createSpherePoints(skills.length, 3.5 * radiusScale);
+  const globeParticles = useMemo(() => {
+    return createSpherePoints(skills.length, 3.5 * radiusScale);
+  }, [radiusScale]);
 
-  const orbits = [
-    createOrbitPath(2 * radiusScale, 100),
-    createOrbitPath(3 * radiusScale, 100),
-    createOrbitPath(4 * radiusScale, 100),
-    createOrbitPath(5 * radiusScale, 100),
-  ];
+  const orbitsPositions = useMemo(() => {
+    const paths = [
+      createOrbitPath(2 * radiusScale, 100),
+      createOrbitPath(3 * radiusScale, 100),
+      createOrbitPath(4 * radiusScale, 100),
+      createOrbitPath(5 * radiusScale, 100),
+    ];
+    return paths.map(points => new Float32Array(points.flatMap(p => [p.x, p.y, p.z])));
+  }, [radiusScale]);
 
   useFrame(({ clock }) => {
     if (!cloudRef.current) return;
@@ -245,11 +266,7 @@ const Cloud = ({ setCursor }: { setCursor: (state: boolean) => void }) => {
         color="#C1440E"
       />
 
-      {orbits.map((points, i) => {
-        const positions = new Float32Array(
-          points.flatMap((p) => [p.x, p.y, p.z]),
-        );
-
+      {orbitsPositions.map((positions, i) => {
         return (
           <line key={i}>
             <bufferGeometry>
@@ -295,7 +312,7 @@ const Cloud = ({ setCursor }: { setCursor: (state: boolean) => void }) => {
 
 /* ================= Main ================= */
 
-const EarthRotate = () => {
+const EarthRotate = memo(() => {
   const [cursor, setCursor] = useState(false);
 
   return (
@@ -312,6 +329,8 @@ const EarthRotate = () => {
       </Canvas>
     </div>
   );
-};
+});
+
+EarthRotate.displayName = "EarthRotate";
 
 export default EarthRotate;
